@@ -1,0 +1,17 @@
+﻿@WebApplication1_HostAddress = https://localhost:7290
+
+GET {{WebApplication1_HostAddress}}/api/employee
+
+###
+
+GET {{WebApplication1_HostAddress}}/api/employee
+
+###
+
+GET {{WebApplication1_HostAddress}}/employee/getemployees/{id}
+
+###
+
+GET {{WebApplication1_HostAddress}}/employee/getemployees/{id}
+
+###

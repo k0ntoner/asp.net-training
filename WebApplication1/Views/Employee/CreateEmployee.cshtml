@@ -1,0 +1,32 @@
+﻿@model Employee
+@{
+	ViewData["Title"] = "Create new Employee";
+}
+<form method="post" >
+	<div class="form-group">
+		<label asp-for="Passport">Passport</label>
+		<input asp-for="Passport" class="form-control" placeholder="Enter Passport"> </input>
+		<span asp-validation-for="Passport" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="FullName">FullName</label>
+		<input asp-for="FullName" class="form-control" placeholder="Enter FullName"> </input>
+		<span asp-validation-for="FullName" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="Lib_Id">Lib_Id</label>
+		<input asp-for="Lib_Id" class="form-control" placeholder="Enter Lib_Id"> </input>
+		<span asp-validation-for="Lib_Id" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="Library.Name">Lib_Id</label>
+		<input asp-for="Lib_Id" class="form-control" placeholder="Enter Lib_Id"> </input>
+		<span asp-validation-for="Lib_Id" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="Pos_Id">Pos_Id</label>
+		<input asp-for="Pos_Id" class="form-control" placeholder="Enter Pos_Id"> </input>
+		<span asp-validation-for="Pos_Id" class="text-danger"></span>
+	</div>
+	<button type="submit" class="btn btn-primary" asp-controller="Employee" asp-action="CreateEmployee"></button>
+</form>

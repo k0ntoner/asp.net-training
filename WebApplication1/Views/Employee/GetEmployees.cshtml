@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Employee>
+
+@{
+	ViewData["Title"] = "Employees Page";
+}
+<table class="table mt-5">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Passport</th>
+            <th scope="col">FullName</th>
+            <th scope="col">Lib_Id</th>
+            <th scope="col">Library</th>
+            <th scope="col">Pos_Id</th>
+            <th scope="col">Position</th>
+            <th scope="col">Detail</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var employee in Model)
+        {
+            <tr>
+                <td>@employee.Id</td>
+                <td>@employee.Passport</td>
+                <td>@employee.FullName</td>
+                <td>@employee.Lib_Id</td>
+                <td>@employee.Library.Name</td>
+                <td>
+                    @employee.Pos_Id
+                </td>
+                <td>@employee.Position.Name</td>
+                <td>
+                    <a  asp-controller="Employee" asp-action="Detail" asp-route-id="@employee.Id">Detail</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a asp-controller="Employee" asp-action="CreateEmployee">Create</a>
